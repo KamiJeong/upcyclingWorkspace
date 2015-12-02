@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="designerWorkings">
+<head>
+    <meta charset="UTF-8">
+    <title>Designer Page</title>
+    <link rel="stylesheet" href="css/material.min.css">
+    <!--<script src="bower_components/material-design-lite/material.min.js"></script>-->
+    <!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--<link rel="stylesheet" href="css/ngProgress.css">-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="AppController">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+    <!-- Header -->
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <h2>Kami's Works</h2>
+
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+
+    <!-- SideBar & Navigation -->
+    <div class="mdl-layout__drawer mdl-color--yellow-200">
+        <a href="#/" class="mdl-layout-title mdl-color--white">Title</a>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="#/">메인페이지</a>
+            <a class="mdl-navigation__link" href="#/myschedule">내 일정</a>
+            <a class="mdl-navigation__link" href="#/inprogress">현재 작업내용</a>
+            <a class="mdl-navigation__link" href="#/inpreparation">미확정 작업내용</a>
+            <a class="mdl-navigation__link" href="#/findrequest">요청 검색</a>
+            <a class="mdl-navigation__link" href="#/makeproject">새 프로젝트</a>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <main class="mdl-layout__content mdl-color--grey-300" ng-view>
+
+    </main>
+</div>
+<!--*** Javascript ***-->
+<script src="app/js/material.min.js"></script>
+<!-- angular -->
+<script src="app/js/angular.min.js"></script>
+<script src="app/js/angular-route.min.js"></script>
+<script src="app/js/angular-material-design-lite.js"></script>
+<script src="app/js/moment.min.js"></script>
+<!--<script src="js/ngprogress.min.js"></script>-->
+<!-- script code -->
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/controllers/main.controller.js"></script>
+<script src="app/controllers/mySchedule.controller.js"></script>
+<script src="app/controllers/inPreparation.controller.js"></script>
+<script src="app/controllers/inProgress.controller.js"></script>
+<script src="app/controllers/makeProject.controller.js"></script>
+<script src="app/controllers/findRequest.controller.js"></script>
+<!-- script code for test -->
+
+</body>
+</html>

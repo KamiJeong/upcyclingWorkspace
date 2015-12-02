@@ -1,0 +1,168 @@
+<div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp mdl-color--grey-200">
+        <div class="mdl-layout__header-row mdl-color--yellow">
+            <h3>현재 작업내용</h3>
+        </div>
+        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp" ng-repeat="project in projects">
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">{{project.projectName}}</h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell--3-col">
+                        <img ng-src="{{project.mainImage}}" alt="" width="100%" height="100%">
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell--8-col">
+                        <dl>
+                            <dt>기간</dt>
+                            <dd>
+                                {{project.deadLine}}
+                            </dd>
+                            <dt>참여인원</dt>
+                            <dd><span ng-repeat="participant in project.participant"> {{participant}} </span></dd>
+                            <dt>설명</dt>
+                            <dd>
+                                <p>{{project.explanation}}
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                   ng-href="#/inprogress/{{project.projectNo}}">
+                    상세보기
+                </a>
+            </div>
+            <div class="mdl-card__menu">
+                <span class="mdl-badge mdl-color--yellow-200" data-badge="{{project.dDay}}">D-Day</span>
+            </div>
+        </div>
+
+        <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col mdl-shadow&#45;&#45;2dp">-->
+        <!--<div class="mdl-card__title">-->
+        <!--<h4 class="mdl-card__title-text">프로젝트 1</h4>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__supporting-text">-->
+        <!--<div class="mdl-grid mdl-grid&#45;&#45;no-spacing">-->
+        <!--<div class="mdl-cell&#45;&#45;3-col">-->
+        <!--<img src="img/test1.jpeg" alt="" width="100%" height="100%">-->
+        <!--</div>-->
+        <!--<div class="mdl-layout-spacer"></div>-->
+        <!--<div class="mdl-cell&#45;&#45;8-col">-->
+        <!--<dl>-->
+        <!--<dt>기간</dt>-->
+        <!--<dd>-->
+        <!--2015.11.21 - 2015.11.25-->
+        <!--</dd>-->
+        <!--<dt>참여인원</dt>-->
+        <!--<dd><span> 최동조 </span><span> 김경환 </span><span> 박소희 </span></dd>-->
+        <!--<dt>현재포인트</dt>-->
+        <!--<dd>-->
+        <!--30000 Point-->
+        <!--</dd>-->
+        <!--<dt>설명</dt>-->
+        <!--<dd>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+        <!--Mauris sagittis pellentesque lacus eleifend lacinia...-->
+        <!--</p>-->
+        <!--</dd>-->
+        <!--</dl>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
+        <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" href="#/inprogress/3">-->
+        <!--상세보기-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__menu">-->
+        <!--<span class="mdl-badge mdl-color&#45;&#45;yellow-200" data-badge="4">D-Day</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col mdl-shadow&#45;&#45;2dp">-->
+        <!--<div class="mdl-card__title">-->
+        <!--<h4 class="mdl-card__title-text">프로젝트 2</h4>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__supporting-text">-->
+        <!--<div class="mdl-grid mdl-grid&#45;&#45;no-spacing">-->
+        <!--<div class="mdl-cell&#45;&#45;3-col">-->
+        <!--<img src="img/test2.jpeg" alt="" width="100%" height="100%">-->
+        <!--</div>-->
+        <!--<div class="mdl-layout-spacer"></div>-->
+        <!--<div class="mdl-cell&#45;&#45;8-col">-->
+        <!--<dl>-->
+        <!--<dt>기간</dt>-->
+        <!--<dd>-->
+        <!--2015.11.21 - 2015.11.25-->
+        <!--</dd>-->
+        <!--<dt>참여인원</dt>-->
+        <!--<dd><span> 최동조 </span><span> 김경환 </span><span> 박소희 </span></dd>-->
+        <!--<dt>현재포인트</dt>-->
+        <!--<dd>-->
+        <!--30000 Point-->
+        <!--</dd>-->
+        <!--<dt>설명</dt>-->
+        <!--<dd>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+        <!--Mauris sagittis pellentesque lacus eleifend lacinia...-->
+        <!--</p>-->
+        <!--</dd>-->
+        <!--</dl>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
+        <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" href="#/inprogress/3">-->
+        <!--상세보기-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__menu">-->
+        <!--<span class="mdl-badge mdl-color&#45;&#45;yellow-200" data-badge="20">D-Day</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col mdl-shadow&#45;&#45;2dp">-->
+        <!--<div class="mdl-card__title">-->
+        <!--<h4 class="mdl-card__title-text">프로젝트 3</h4>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__supporting-text">-->
+        <!--<div class="mdl-grid mdl-grid&#45;&#45;no-spacing">-->
+        <!--<div class="mdl-cell&#45;&#45;3-col">-->
+        <!--<img src="img/test3.jpeg" alt="" width="100%" height="100%">-->
+        <!--</div>-->
+        <!--<div class="mdl-layout-spacer"></div>-->
+        <!--<div class="mdl-cell&#45;&#45;8-col">-->
+        <!--<dl>-->
+        <!--<dt>기간</dt>-->
+        <!--<dd>-->
+        <!--2015.11.21 - 2015.11.25-->
+        <!--</dd>-->
+        <!--<dt>참여인원</dt>-->
+        <!--<dd><span> 최동조 </span><span> 김경환 </span><span> 박소희 </span></dd>-->
+        <!--<dt>현재포인트</dt>-->
+        <!--<dd>-->
+        <!--30000 Point-->
+        <!--</dd>-->
+        <!--<dt>설명</dt>-->
+        <!--<dd>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+        <!--Mauris sagittis pellentesque lacus eleifend lacinia...-->
+        <!--</p>-->
+        <!--</dd>-->
+        <!--</dl>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
+        <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" href="#/inprogress/3">-->
+        <!--상세보기-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="mdl-card__menu">-->
+        <!--<span class="mdl-badge mdl-color&#45;&#45;yellow-200" data-badge="8">D-Day</span>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>

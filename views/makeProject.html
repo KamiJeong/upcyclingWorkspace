@@ -1,0 +1,89 @@
+<div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp mdl-color--grey-200">
+        <div class="mdl-layout__header-row mdl-color--yellow">
+            <h3>새 프로젝트</h3>
+        </div>
+
+        <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--2dp mdl-layout__content mdl-grid">
+            <form action="#" class="mdl-cell mdl-cell--12-col" ng-model="newProject" name="newProjectForm"
+                  ng-submit="makeProject($event, newProject)">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="projectName" ng-model="newProject.projectName"
+                           required>
+                    <label class="mdl-textfield__label" for="projectName">프로젝트명</label>
+                </div>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--2-col">
+                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?"
+                           id="startPoint" ng-model="newProject.startPoint" required>
+                    <label class="mdl-textfield__label" for="startPoint">책정가</label>
+                    <!--<span class="mdl-textfield__error">Input is not a number!</span>-->
+                </div>
+                <span>P</span>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--2-col">
+                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?"
+                           id="minimumPoint" ng-model="newProject.minimumPoint" required>
+                    <label class="mdl-textfield__label" for="minimumPoint">목표포인트</label>
+                    <!--<span class="mdl-textfield__error">Input is not a number!</span>-->
+                </div>
+                <span>P</span>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--2-col">
+                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?"
+                           id="maxParticipant" ng-model="newProject.maxParticipant" required>
+                    <label class="mdl-textfield__label" for="maxParticipant">최대참여인원</label>
+                    <!--<span class="mdl-textfield__error">Input is not a number!</span>-->
+                </div>
+                <span>명</span>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--2-col">
+                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?"
+                           id="leadTime" ng-model="newProject.leadTime" required>
+                    <label class="mdl-textfield__label" for="leadTime">소요기간</label>
+                    <!--<span class="mdl-textfield__error">Input is not a number!</span>-->
+                </div>
+                <span>일</span>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--2-col">
+                    <input class="mdl-textfield__input" type="text" id="fundingDeadLine"
+                           ng-model="newProject.fundingDeadLine" required>
+                    <label class="mdl-textfield__label" for="fundingDeadLine">마감일 ex)2015.01.02</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield">
+                    <label for="mainImage">대표 이미지</label>
+                    <input class="mdl-textfield__input" type="file" id="mainImage" formenctype="multipart/form-data"
+                           onchange="angular.element(this).scope().setMainImage(this)" required>
+                </div>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--12-col">
+                    <label>추가 이미지</label>
+
+                    <div class="mdl-grid">
+                        <input class="mdl-textfield__input mdl-cell--4-col" type="file" id="subImage1"
+                               formenctype="multipart/form-data"
+                               onchange="angular.element(this).scope().setSubImage1(this)">
+                        <input class="mdl-textfield__input mdl-cell--4-col" type="file" id="subImage2"
+                               formenctype="multipart/form-data"
+                               onchange="angular.element(this).scope().setSubImage2(this)">
+                        <input class="mdl-textfield__input mdl-cell--4-col" type="file" id="subImage3"
+                               formenctype="multipart/form-data"
+                               onchange="angular.element(this).scope().setSubImage3(this)">
+                    </div>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-cell--12-col">
+                    <label for="explanation">설명</label>
+                    <textarea class="mdl-textfield__input" type="text" id="explanation" rows="5"
+                              ng-model="newProject.explanation" required></textarea>
+                </div>
+
+                <div class="mdl-layout-spacer"></div>
+                <button type="reset" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">리셋</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                        ng-disabled="newProjectForm.$invalid">추가
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

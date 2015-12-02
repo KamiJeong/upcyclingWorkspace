@@ -1,0 +1,120 @@
+<div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp mdl-color--grey-200">
+        <div class="mdl-layout__header-row mdl-color--yellow">
+            <h3>내 일정</h3>
+        </div>
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar mdl-color--white">
+                <a href="#test-panel1" class="mdl-tabs__tab is-active">
+                    오늘 일정
+                </a>
+                <a href="#test-panel2" class="mdl-tabs__tab">
+                    전체 일정
+                </a>
+            </div>
+            <div class="mdl-tabs__panel is-active" id="test-panel1">
+                <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--2dp mdl-layout__content mdl-grid">
+                    <form action="#" class="mdl-cell mdl-cell--12-col" ng-model="todayTodo"
+                          ng-submit="addTodayTodo($event, todayTodo)">
+                        <div class="mdl-textfield mdl-js-textfield mdl-cell--5-col">
+                            <input class="mdl-textfield__input" type="text" id="todayNewSchedule"
+                                   ng-model="todayTodo.schedule">
+                            <label class="mdl-textfield__label" for="todayNewSchedule">오늘 일정 추가하기</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-cell--3-col">
+                            <input class="mdl-textfield__input" type="text" id="todayScheduleTime"
+                                   ng-model="todayTodo.time">
+                            <label class="mdl-textfield__label" for="todayScheduleTime">ex) 23:04</label>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">추가</button>
+                    </form>
+                </div>
+                <table class="mdl-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric" width="80%">일정</th>
+                        <th>시간</th>
+                        <th>날짜</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="todo in todoList">
+                        <td class="mdl-data-table__cell--non-numeric">{{todo.schedule}}</td>
+                        <td>{{todo.time}}</td>
+                        <td>{{todo.date}}</td>
+                    </tr>
+                    <!--<tr>-->
+                    <!--<td class="mdl-data-table__cell&#45;&#45;non-numeric">아침밥 먹기</td>-->
+                    <!--<td>07:00</td>-->
+                    <!--<td>2015.11.24</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td class="mdl-data-table__cell&#45;&#45;non-numeric">점심밥 먹기</td>-->
+                    <!--<td>12:00</td>-->
+                    <!--<td>2015.11.24</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td class="mdl-data-table__cell&#45;&#45;non-numeric">저녁밥 굶기</td>-->
+                    <!--<td>18:00</td>-->
+                    <!--<td>2015.11.24</td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">선택된 일정 삭제하기
+                    </button>
+                </div>
+            </div>
+            <div class="mdl-tabs__panel" id="test-panel2">
+                <div class="mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--2dp mdl-layout__content mdl-grid">
+                    <form action="#" class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield mdl-cell--5-col">
+                            <input class="mdl-textfield__input" type="text" id="newSchedule">
+                            <label class="mdl-textfield__label" for="newSchedule">일정 추가하기</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-cell--3-col">
+                            <input class="mdl-textfield__input" type="text" id="scheduleDate">
+                            <label class="mdl-textfield__label" for="scheduleDate">ex) 2015.01.01</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-cell--3-col">
+                            <input class="mdl-textfield__input" type="text" id="scheduleTime">
+                            <label class="mdl-textfield__label" for="scheduleTime">ex) 23:04</label>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">추가</button>
+                    </form>
+                </div>
+                <table class="mdl-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric" width="80%">일정</th>
+                        <th>시간</th>
+                        <th>날짜</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">아침밥 먹기</td>
+                        <td>07:00</td>
+                        <td>2015.11.24</td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">점심밥 먹기</td>
+                        <td>12:00</td>
+                        <td>2015.11.24</td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">저녁밥 굶기</td>
+                        <td>18:00</td>
+                        <td>2015.11.24</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">선택된 일정 삭제하기
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

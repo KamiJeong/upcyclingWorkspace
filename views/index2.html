@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Designer Page</title>
+    <link rel="stylesheet" href="css/material.min.css">
+    <!--<script src="bower_components/material-design-lite/material.min.js"></script>-->
+    <!--<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+
+    <!-- Header -->
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+
+    <!-- SideBar & Navigation -->
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+    <!-- Content -->
+    <main class="mdl-layout__content" ng-view>
+        <div class="page-content mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-shadow--2dp">
+                Content 1
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp mdl-color--grey-200">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar mdl-color--white">
+                        <a href="#test-panel1" class="mdl-tabs__tab is-active">Test-Panel1</a>
+                        <a href="#test-panel2" class="mdl-tabs__tab">Test-Panel2</a>
+                        <a href="#test-panel3" class="mdl-tabs__tab">Test-Panel3</a>
+                    </div>
+                    <div class="mdl-tabs__panel is-active" id="test-panel1">
+                        <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 10%;">카테고리</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 90%;">프로젝트 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-tabs__panel" id="test-panel2">
+                        <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 10%;">카테고리</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 90%;">프로젝트 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-tabs__panel" id="test-panel3">
+                        <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 10%;">카테고리</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 90%;">프로젝트 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp mdl-color--grey-200">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar mdl-color--white">
+                        <a href="#test-panel4" class="mdl-tabs__tab is-active">Test-Panel4</a>
+                        <a href="#test-panel5" class="mdl-tabs__tab">Test-Panel5</a>
+                        <a href="#test-panel6" class="mdl-tabs__tab">Test-Panel6</a>
+                    </div>
+                    <div class="mdl-tabs__panel is-active" id="test-panel4">
+                        <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 10%;">카테고리</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 90%;">프로젝트 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-tabs__panel" id="test-panel5">
+                        <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 10%;">카테고리</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 90%;">프로젝트 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mdl-tabs__panel" id="test-panel6">
+                        <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 10%;">카테고리</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 90%;">프로젝트 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 10%;">옷</td>
+                                <td class="mdl-data-table__cell--non-numeric" style="width: 90%;">옷좀 만들어 주세요~</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp mdl-color--grey-200">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar mdl-color--white">
+                        <a href="#test-panel7" class="mdl-tabs__tab is-active">Test-Panel7</a>
+                        <a href="#test-panel8" class="mdl-tabs__tab">Test-Panel8</a>
+                        <a href="#test-panel9" class="mdl-tabs__tab">Test-Panel9</a>
+                    </div>
+                    <div class="mdl-tabs__panel is-active" id="test-panel7">
+                        <ul>
+                            <li>Hello</li>
+                            <li>hi</li>
+                        </ul>
+                    </div>
+                    <div class="mdl-tabs__panel" id="test-panel8">
+                        <ul>
+                            <li>hi</li>
+                            <li>hello</li>
+                        </ul>
+                    </div>
+                    <div class="mdl-tabs__panel" id="test-panel9">
+                        <ul>
+                            <li>say</li>
+                            <li>hi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<!--*** Javascript ***-->
+<script src="js/material.min.js"></script>
+<!-- script code for test -->
+
+</body>
+</html>

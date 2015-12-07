@@ -20,6 +20,10 @@ angular.module('appConfig', [])
                 templateUrl: 'views/inProgress.detail.html',
                 controller: 'InProgressController'
             })
+            .when('/inprogress/:no/message', {
+                templateUrl: 'views/inProgress.message.html',
+                controller: 'InProgressController'
+            })
             .when('/inpreparation', {
                 templateUrl: 'views/inPreparation.html',
                 controller: 'InPreparationController'

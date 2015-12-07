@@ -8,7 +8,7 @@
                 <h4 class="mdl-card__title-text">{{project.projectName}}</h4>
             </div>
             <div class="mdl-card__supporting-text">
-                <div class="mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-grid mdl-grid--no-spacing mdl-color--">
                     <div class="mdl-cell--3-col">
                         <img ng-src="{{project.mainImage}}" alt="" width="100%" height="100%">
                     </div>
@@ -34,6 +34,10 @@
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
                    ng-href="#/inprogress/{{project.projectNo}}">
                     상세보기
+                </a>
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                   ng-href="#/inprogress/{{project.projectNo}}/message">
+                    진행상황 작성
                 </a>
             </div>
             <div class="mdl-card__menu">
